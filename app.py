@@ -3,7 +3,9 @@ import streamlit as st
 from PyPDF2 import PdfReader
 
 # Set your OpenAI API key
-openai.api_key = "your-openai-api-key"  # Replace with your OpenAI API key
+import os
+openai.api_key = os.getenv("OPENAI_API_KEY")
+  # Replace with your OpenAI API key
 
 st.set_page_config(page_title="AI Job Recommender", page_icon="🤖", layout="centered")
 st.title("🤖 AI Job Recommendation Assistant")
